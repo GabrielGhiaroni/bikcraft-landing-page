@@ -18,33 +18,41 @@ a {
 }
 
 p {
-    font-size: 20px;
+    font-size: 1.25rem;
     line-height: 1.3;
 }
 
 header {
     display: grid;
-    justify-content: center;
+    justify-items: center;
     margin-top: 80px;
+    gap: 60px;
 }
 
-nav {
+ul {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
+    margin: 0px;
+    list-style: none;
 }
 
-nav a {
+ul a {
+    display: inline-block;
     color: #000000;
-    font-size: 16px;
+    font-size: 1rem;
     background-color: #ffffff;
     padding: 10px 25px;
     text-align: center;
     border-radius: 3px;
 }
 
-main {
+ul a:hover {
+    border: 2px solid #ee2211;
+}
+
+article {
     display: grid;
     grid-template-columns: 1fr 1fr;
     max-width: 1000px;
@@ -66,15 +74,20 @@ img {
     justify-items: end;
 }
 
-.detalhe {
-    width: 60px;
+.divText h1 {
+    position: relative;
+    font-size: 2rem
+}
+
+.divText h1::after {
+    content: "";
     height: 4px;
+    width: 60px;
     background-color: #ee2211;
+    display: inline-block;
     position: absolute;
-    top: 30px;
-    right: -30px;
-    align-content: center;
-    gap: 20px;
+    margin-top: -50px;
+    margin-left: 10px;
 }
 
 .divText a {
@@ -86,13 +99,19 @@ img {
 
 }
 
-.vantagensBikcraft {
-    font-size: 64px;
+.divText a:hover {
+    color: #f7f7f7;
+    background-color: #a00d00;
+}
+
+article h2 {
+    font-size: 4rem;
     color: rgba(0, 0, 0, 0.2);
     text-align: right;
     padding: 40px;
     font-weight: bold;
     align-self: center;
+    background-image: url(/icones/onda.svg);
 }
 
 .vantagens {
@@ -100,27 +119,27 @@ img {
     padding: 40px;
 }
 
-.vantagensItens {
+.vantagens-item {
     display: grid;
     grid-template-columns: auto 1fr;
     gap: 10px 20px;
     padding: 20px;
+    border-left: 4px solid transparent;
 }
 
-.vantagensItens p {
+.vantagens-item:nth-child(odd) {
+    background-color: #f7f7f7;
+}
+
+.vantagens-item:hover {
+    border-color: #e21;
+}
+
+.vantagens-item p {
     grid-column: 2;
 }
 
-.item-1,
-.item-2 {
-    margin-bottom: 20px;
-}
-
-.bold {
-    font-weight: bold;
-}
-
-.rodape {
+footer {
     margin-top: 50px;
     background-color: #fff;
     width: 100%;
