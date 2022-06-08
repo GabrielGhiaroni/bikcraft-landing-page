@@ -90,6 +90,11 @@ img {
     margin-left: 10px;
 }
 
+.introducaoCover img {
+    height: 100%;
+    object-fit: cover;
+}
+
 .divText a {
     color: #f7f7f7;
     background-color: #ee2211;
@@ -146,4 +151,18 @@ footer {
     text-align: center;
     box-sizing: border-box;
     padding: 20px;
+}
+
+@media (max-width: 1000px) {
+    .conteudo {
+        grid-template-columns: 1fr;
+    }
+
+    .divText h1::after {
+        display: none
+    }
+
+    .conteudo-vantagens h2 {
+        text-align: center;
+    }
 }
